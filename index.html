@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Form</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file -->
+    <link rel="stylesheet" href="style.css"> <!-- Add your CSS file -->
 </head>
 <body>
+
     <section class="contact-section">
         <div class="contact-intro">
             <h2 class="contact-title">Get in Touch</h2>
@@ -15,11 +16,11 @@
             </p>
         </div>
     
-        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <form id="contact-form" class="contact-form">
             <input type="hidden" name="access_key" value="6eda89e2-3317-4908-8c1c-a1971a5caa73" />
             <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
             <input type="hidden" name="from_name" value="My Website" />
-    
+
             <div class="form-group-container">
                 <div class="form-group">
                     <label for="name" class="form-label">Name</label>
@@ -41,5 +42,31 @@
             <button class="form-submit" type="submit">Send Message</button>
         </form>
     </section>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            
+            const formData = new FormData(this);
+
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert("Thanks, we'll get back to you soon! :)");
+                    window.location.href = "https://leajohannes.ch"; // Change to your custom site
+                } else {
+                    alert("Error submitting form. Please try again.");
+                }
+            })
+            .catch(error => {
+                alert("Something went wrong. Please try again later.");
+            });
+        });
+    </script>
+
 </body>
 </html>
