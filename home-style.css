@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Infant', serif;
+    background-color: #d8a18f;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Flex container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Logo - Bigger on Desktop */
+.logo {
+    width: 60%; /* Increased for desktop */
+    max-width: 500px; /* Significantly larger on bigger screens */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Content */
+.content {
+    padding: 10px;
+    width: 100%;
+}
+
+/* Responsive Text (Reduced Font Size) */
+.content h1 {
+    font-size: 2rem; /* Reduced by 5 units */
+    line-height: 1.4; /* Keeps spacing */
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px; /* Ensures gap */
+}
+
+.content p {
+    font-size: 1.1rem; /* Reduced by 5 units */
+}
+
+.content a {
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .logo {
+        width: 50%;
+        max-width: 400px;
+    }
+
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 55%;
+        max-width: 350px;
+    }
+
+    .content h1 {
+        font-size: 1.6rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 70%;
+        max-width: 250px;
+    }
+
+    .content h1 {
+        font-size: 1.3rem;
+        white-space: normal;
+    }
+
+    .content p {
+        font-size: 0.85rem;
+    }
+}
+
+/* iPhone 12 Mini Specific */
+@media (max-width: 360px) {
+    .container {
+        padding: 5px;
+    }
+
+    .logo {
+        width: 80%;
+        max-width: 200px;
+    }
+
+    .content h1 {
+        font-size: 1.1rem;
+    }
+
+    .content p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Copyright */
+.copyright-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: black;
+}
