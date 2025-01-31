@@ -1,198 +1,138 @@
-/*index-style.css - defines style for index.html*/
-
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@700&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
-    font-family: 'Cormorant Infant', serif;
     background-color: #d8a18f;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-    padding: 20px;
+    font-family: 'Cormorant Infant', serif;
+    color: #fff;
 }
 
-/* Navigation Menu */
-.navbar {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.1); /* Slight transparency */
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
+nav {
+    background-color: #333;
+    padding: 15px 0;
 }
 
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
-}
-
-.navbar li {
-    display: inline;
-}
-
-.navbar a {
+nav a {
+    color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
-    color: black;
+    margin: 0 15px;
     font-weight: bold;
-    padding: 8px 15px;
-    transition: color 0.3s ease-in-out;
+    font-size: 16px;
 }
 
-.navbar a:hover {
-    color: white;
+nav a:hover {
+    color: #d8a18f;
 }
 
-/* Flex container */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 800px;
-    width: 100%;
-    padding: 20px;
-    margin-top: 60px; /* To ensure spacing below navbar */
-}
-
-/* Logo - Bigger on Desktop */
-.logo {
-    width: 60%;
-    max-width: 500px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-/* Content */
-.content {
-    padding: 10px;
-    width: 100%;
-}
-
-/* Responsive Text */
-.content h1 {
+h2 {
     font-size: 2rem;
-    line-height: 1.4;
-    white-space: nowrap;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+section {
+    padding: 60px 0;
+    background-color: #fff;
+    color: #333;
+}
+
+section p {
+    font-size: 1.2rem;
+}
+
+.contact-intro {
+    margin-bottom: 30px;
+}
+
+.contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #d8a18f;
+}
+
+.contact-description {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
+    gap: 15px;
 }
 
-.content p {
-    font-size: 1.1rem;
+.form-group {
+    flex: 1 1 calc(50% - 15px);
+    margin-bottom: 15px;
 }
 
-.content a {
-    color: black;
-    text-decoration: underline;
+.form-group label {
     font-weight: bold;
+    color: #333;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .logo {
-        width: 50%;
-        max-width: 400px;
-    }
-
-    .content h1 {
-        font-size: 1.8rem;
-    }
-
-    .content p {
-        font-size: 1rem;
-    }
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 1rem;
 }
 
+.form-group textarea {
+    min-height: 120px;
+}
+
+.form-group select {
+    padding: 10px 12px;
+}
+
+.form-submit {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #d8a18f;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-submit:hover {
+    background-color: #b0776d;
+}
+
+footer {
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Queries for responsiveness */
 @media (max-width: 768px) {
-    .logo {
-        width: 55%;
-        max-width: 350px;
+    .form-group {
+        flex: 1 1 100%;
     }
 
-    .content h1 {
-        font-size: 1.6rem;
+    nav a {
+        font-size: 14px;
     }
 
-    .content p {
-        font-size: 0.9rem;
+    h2 {
+        font-size: 1.5rem;
     }
-
-    .navbar a {
-        font-size: 1rem;
-        padding: 6px 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        width: 70%;
-        max-width: 250px;
-    }
-
-    .content h1 {
-        font-size: 1.3rem;
-        white-space: normal;
-    }
-
-    .content p {
-        font-size: 0.85rem;
-    }
-
-    .navbar ul {
-        gap: 15px;
-    }
-
-    .navbar a {
-        font-size: 0.9rem;
-        padding: 5px 10px;
-    }
-}
-
-/* iPhone 12 Mini Specific */
-@media (max-width: 360px) {
-    .container {
-        padding: 5px;
-    }
-
-    .logo {
-        width: 80%;
-        max-width: 200px;
-    }
-
-    .content h1 {
-        font-size: 1.1rem;
-    }
-
-    .content p {
-        font-size: 0.8rem;
-    }
-
-    .navbar a {
-        font-size: 0.85rem;
-        padding: 4px 8px;
-    }
-}
-
-/* Copyright */
-.copyright-text {
-    margin-top: 20px;
-    font-size: 14px;
-    color: black;
 }
