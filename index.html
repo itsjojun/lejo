@@ -3,43 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css"> <!-- Add your CSS file -->
+    <title>Kontaktformular</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <section class="contact-section">
         <div class="contact-intro">
-            <h2 class="contact-title">Get in Touch</h2>
-            <p class="contact-description">
-                Fill out the form below and we'll get back to you as soon as possible.
-            </p>
+            <h2 class="contact-title">Kontaktformular</h2>
+            <p class="contact-description">Füllen Sie das Formular aus, und wir melden uns so schnell wie möglich bei Ihnen.</p>
         </div>
     
         <form id="contact-form" class="contact-form">
             <input type="hidden" name="access_key" value="6eda89e2-3317-4908-8c1c-a1971a5caa73" />
-            <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+            <input type="hidden" name="subject" value="Neue Anfrage über das Kontaktformular" />
             <input type="hidden" name="from_name" value="My Website" />
 
             <div class="form-group-container">
                 <div class="form-group">
-                    <label for="name" class="form-label">Name</label>
-                    <input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
+                    <label for="person-type" class="form-label">Personenart</label>
+                    <select id="person-type" name="person_type" class="form-input" required>
+                        <option value="Firma">Firma</option>
+                        <option value="Privatperson">Privatperson</option>
+                    </select>
                 </div>
+
                 <div class="form-group">
-                    <label for="email" class="form-label">Email</label>
-                    <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
+                    <label for="first-name" class="form-label">Vorname</label>
+                    <input id="first-name" name="first_name" class="form-input" placeholder="Ihr Vorname" type="text" required />
                 </div>
+
                 <div class="form-group">
-                    <label for="phone" class="form-label">Phone</label>
+                    <label for="last-name" class="form-label">Nachname</label>
+                    <input id="last-name" name="last_name" class="form-input" placeholder="Ihr Nachname" type="text" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="address" class="form-label">Adresse</label>
+                    <input id="address" name="address" class="form-input" placeholder="Ihre Adresse" type="text" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="zip-city" class="form-label">PLZ, Ort</label>
+                    <input id="zip-city" name="zip_city" class="form-input" placeholder="PLZ, Ort" type="text" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">E-Mail</label>
+                    <input id="email" name="email" class="form-input" placeholder="Ihre E-Mail" type="email" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" class="form-label">Tel. Nummer</label>
                     <input id="phone" name="phone" class="form-input" placeholder="+1 (234) 56789" type="text" />
                 </div>
+
                 <div class="form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-textarea" id="message" name="message" placeholder="Your message" required></textarea>
+                    <label for="event-date" class="form-label">Datum des Events</label>
+                    <input id="event-date" name="event_date" class="form-input" type="date" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="event-location" class="form-label">Ort des Events</label>
+                    <input id="event-location" name="event_location" class="form-input" placeholder="Ort des Events" type="text" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="event-type" class="form-label">Art des Events</label>
+                    <select id="event-type" name="event_type" class="form-input" required>
+                        <option value="Hochzeit">Hochzeit</option>
+                        <option value="Geburtstag">Geburtstag</option>
+                        <option value="Firmenfeier">Firmenfeier</option>
+                        <option value="Sonstiges">Sonstiges</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-details" class="form-label">Eventdetails</label>
+                    <textarea id="event-details" name="event_details" class="form-textarea" placeholder="Songs to sing, Gesangsdauer, individuelle Liederwünsche, etc." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="guest-count" class="form-label">Anzahl Gäste</label>
+                    <select id="guest-count" name="guest_count" class="form-input" required>
+                        <option value="1-50">1-50</option>
+                        <option value="51-100">51-100</option>
+                        <option value="101-200">101-200</option>
+                        <option value="200+">200+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget" class="form-label">Budgetvorstellungen</label>
+                    <select id="budget" name="budget" class="form-input" required>
+                        <option value="unter 1000€">unter 1000€</option>
+                        <option value="1000€ - 3000€">1000€ - 3000€</option>
+                        <option value="3000€ - 5000€">3000€ - 5000€</option>
+                        <option value="über 5000€">über 5000€</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Das möchte ich euch noch mitteilen</label>
+                    <textarea id="message" name="message" class="form-textarea" placeholder="Weitere Details oder Anmerkungen" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="how-did-you-hear" class="form-label">Wie haben Sie von uns erfahren?</label>
+                    <input id="how-did-you-hear" name="how_did_you_hear" class="form-input" placeholder="z.B. Empfehlung, Social Media" type="text" />
                 </div>
             </div>
-            <button class="form-submit" type="submit">Send Message</button>
+
+            <button class="form-submit" type="submit">Nachricht senden</button>
         </form>
     </section>
 
@@ -56,14 +131,14 @@
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    alert("Thanks, we'll get back to you soon! :)");
+                    alert("Danke, wir melden uns bald bei Ihnen! :)");
                     window.location.href = "https://leajohannes.ch"; // Change to your custom site
                 } else {
-                    alert("Error submitting form. Please try again.");
+                    alert("Fehler beim Absenden des Formulars. Bitte versuchen Sie es später erneut.");
                 }
             })
             .catch(error => {
-                alert("Something went wrong. Please try again later.");
+                alert("Etwas ist schiefgegangen. Bitte versuchen Sie es später.");
             });
         });
     </script>
