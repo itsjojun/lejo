@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Lea & Johannes, leajohannes, Lea und Johannes">
-    <meta name="description" content="Lea & Johannes - Ihre Musik, unsere Leidenschaft – Duettgesang für Momente, die berühren.">
+    <meta name="description" content="Ihre Musik, unsere Leidenschaft - Duettgesang für Momente, die berühern.">
     <meta name="author" content="Lea & Johannes">
     <title>Lea & Johannes</title>
 
@@ -17,37 +17,149 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100 text-center" style="background-color: #d8a18f; font-family: 'Cormorant Infant', serif;">
-    
-    <!-- Navigation Menu -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="pics/logo/leajohannes-log.png" alt="Lea & Johannes Logo" style="height: 40px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#referenzen">Referenzen</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#repertoire">Repertoire</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#angebot">Angebot</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#ueberuns">Über uns</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
-                </ul>
-            </div>
-        </div>
+    <header id="home">
+        <h1>Lea & Johannes</h1>
+    </header>
+    <nav>
+        <a href="#home">About</a>
+        <a href="#angebot">About</a>
+        <a href="#referenzen">About</a>
+        <a href="#repertoire">About</a>
+        <a href="#ueberuns">Services</a>
+        <a href="#kontakt">Contact</a>
     </nav>
+    <section id="angebot">
+        <h2>Angebot</h2>
+        <p>Anbebotstext xyz</p>
+    </section>
+    <section id="referenzen">
+        <h2>Referenzen</h2>
+        <p>Refernezen xyz</p>
+    </section>
+    <section id="repertoire">
+        <h2>Repertoire</h2>
+        <p>Repertoire xyz</p>
+    </section>
+    <section id="ueberuns">
+        <h2>Über Uns</h2>
+        <p>Über Uns xyz</p>
+    </section>
 
-    <!-- Main Content -->
-    <div class="container d-flex flex-column align-items-center justify-content-center flex-grow-1" id="home">
-        <img src="pics/logo/leajohannes-logo.png" alt="Lea & Johannes Logo" class="img-fluid my-4" style="max-width: 500px;">
-        <h1>Unsere Webseite befindet sich zurzeit im Aufbau...</h1>
-        <p>In der Zwischenzeit erreichen Sie uns per E-Mail: 
-            <a href="mailto:kontakt@leajohannes.ch" class="fw-bold">kontakt@leajohannes.ch</a>
-        </p>
-    </div>
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <div class="contact-intro">
+            <h2 class="contact-title">Kontaktieren Sie uns</h2>
+            <p class="contact-description">
+                Füllen Sie das Formular aus, und wir melden uns so schnell wie möglich bei Ihnen.
+            </p>
+        </div>
+    
+        <form id="contact-form" class="contact-form">
+            <input type="hidden" name="access_key" value="6eda89e2-3317-4908-8c1c-a1971a5caa73" />
+            <input type="hidden" name="subject" value="Neue Kontaktanfrage von Web3Forms" />
+            <input type="hidden" name="from_name" value="Meine Website" />
+
+            <div class="form-group-container">
+                <div class="form-group">
+                    <label for="contact-type" class="form-label">Kontaktart</label>
+                    <select id="contact-type" name="contact-type" class="form-input" required>
+                        <option value="Firma">Firma</option>
+                        <option value="Privatperson">Privatperson</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="first-name" class="form-label">Vorname</label>
+                    <input id="first-name" name="first-name" class="form-input" placeholder="Ihr Vorname" type="text" required />
+                </div>
+                <div class="form-group">
+                    <label for="last-name" class="form-label">Nachname</label>
+                    <input id="last-name" name="last-name" class="form-input" placeholder="Ihr Nachname" type="text" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="address" class="form-label">Adresse</label>
+                    <input id="address" name="address" class="form-input" placeholder="Straße, Hausnummer" type="text" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="zip-city" class="form-label">PLZ, Ort</label>
+                    <input id="zip-city" name="zip-city" class="form-input" placeholder="PLZ, Ort" type="text" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">E-Mail</label>
+                    <input id="email" name="email" class="form-input" placeholder="Ihre E-Mail" type="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="form-label">Tel. Nummer</label>
+                    <input id="phone" name="phone" class="form-input" placeholder="+41 78 123 45 67" type="tel" pattern="^\+41\s[0-9]{2}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}$" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="event-date" class="form-label">Datum des Events</label>
+                    <input id="event-date" name="event-date" class="form-input" type="date" required />
+                </div>
+                <div class="form-group">
+                    <label for="event-location" class="form-label">Ort des Events</label>
+                    <input id="event-location" name="event-location" class="form-input" placeholder="Veranstaltungsort" type="text" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="event-type" class="form-label">Art des Events</label>
+                    <select id="event-type" name="event-type" class="form-input" required>
+                        <option value="Hochzeit">Hochzeit</option>
+                        <option value="Geburtstag">Geburtstag</option>
+                        <option value="Firmenfeier">Firmenfeier</option>
+                        <option value="Sonstiges">Sonstiges</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-details" class="form-label">Eventdetails</label>
+                    <textarea id="event-details" name="event-details" class="form-textarea" placeholder="Lieder, Gesangsdauer, Wünsche etc." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="guests" class="form-label">Anzahl Gäste</label>
+                    <select id="guests" name="guests" class="form-input" required>
+                        <option value="1-50">1-50</option>
+                        <option value="51-100">51-100</option>
+                        <option value="101-150">101-150</option>
+                        <option value="150+">150+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget" class="form-label">Budgetvorstellungen</label>
+                    <select id="budget" name="budget" class="form-input" required>
+                        <option value="600-800 CHF">600 - 800 CHF</option>
+                        <option value="800-1000 CHF">800 - 1000 CHF</option>
+                        <option value="1000-1200 CHF">1000 - 1200 CHF</option>
+                        <option value="1200-1400 CHF">1200 - 1400 CHF</option>
+                        <option value="1400+ CHF">1400 CHF +</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="additional-info" class="form-label">Das möchte ich euch noch mitteilen</label>
+                    <textarea id="additional-info" name="additional-info" class="form-textarea" placeholder="Zusätzliche Informationen"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="how-found" class="form-label">Wie haben Sie von uns erfahren?</label>
+                    <input id="how-found" name="how-found" class="form-input" placeholder="Social Media, Empfehlungen..." type="text" required />
+                </div>
+
+                <div id="company-fields" class="form-group" style="display: none;">
+                    <label for="company-name" class="form-label">Firma Name</label>
+                    <input id="company-name" name="company-name" class="form-input" placeholder="Firmenname" type="text" />
+                </div>
+            </div>
+            
+            <button class="form-submit" type="submit">Nachricht senden</button>
+        </form>
+    </section>
 
     <!-- Footer -->
     <footer class="mt-auto py-3 bg-light">
@@ -55,6 +167,7 @@
             <p class="m-0">&copy; 2025 Lea & Johannes</p>
         </div>
     </footer>
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
