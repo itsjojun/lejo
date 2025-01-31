@@ -3,65 +3,59 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="Lea & Johannes, leajohannes, Lea und Johannes">
     <meta name="description" content="Lea & Johannes - Ihre Musik, unsere Leidenschaft – Duettgesang für Momente, die berühren.">
     <meta name="author" content="Lea & Johannes">
     <title>Lea & Johannes</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="pics/logo/leajohannes-logo-short.png">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="index-style.css">
-
-    <!-- Preview -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Lea & Johannes" />
-    <meta property="og:url" content="https://leajohannes.ch" />
-    <meta property="og:image" content="https://leajohannes.ch/pics/logo/leajohannes-logo-preview.png" />
-    <meta property="og:description" content="Ihre Musik, unsere Leidenschaft – Duettgesang für Momente, die berühren." />
-
-    <!-- Twitter aka X Preview -->
-    <meta name="twitter:title" content="Lea & Johannes" />
-    <meta name="twitter:description" content="Ihre Musik, unsere Leidenschaft – Duettgesang für Momente, die berühren." />
-    <meta name="twitter:image" content="https://leajohannes.ch/pics/logo/leajohannes-logo-preview.png" />
-    <link rel="canonical" href="https://leajohannes.ch">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100 text-center" style="background-color: #d8a18f; font-family: 'Cormorant Infant', serif;">
+    
     <!-- Navigation Menu -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="referenzen.html">Referenzen</a></li>
-            <li><a href="repertoire.html">Repertoire</a></li>
-            <li><a href="angebot.html">Angebot</a></li>
-            <li><a href="ueberuns.html">Über uns</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Lea & Johannes</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="referenzen.html">Referenzen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="repertoire.html">Repertoire</a></li>
+                    <li class="nav-item"><a class="nav-link" href="angebot.html">Angebot</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ueberuns.html">Über uns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- Container -->
-    <div class="container">
-        <!-- Logo -->
-        <img src="/pics/logo/leajohannes-logo.png" alt="Lea & Johannes Logo" class="logo">
-
-        <!-- Content -->
-        <div class="content">
-            <h1>Unsere Webseite befindet sich zurzeit im Aufbau...</h1>
-            <p>In der Zwischenzeit erreichen Sie uns per E-Mail: 
-                <a href="mailto:kontakt@leajohannes.ch">kontakt@leajohannes.ch</a>
-            </p>
-        </div>
-
-        <!-- Copyright Text -->
-        <!--
-        <div class="copyright-text">
-            © 2025 Lea & Johannes
-        </div>
-        -->
+    <!-- Main Content -->
+    <div class="container d-flex flex-column align-items-center justify-content-center flex-grow-1">
+        <img src="/pics/logo/leajohannes-logo.png" alt="Lea & Johannes Logo" class="img-fluid my-4" style="max-width: 500px;">
+        <h1>Unsere Webseite befindet sich zurzeit im Aufbau...</h1>
+        <p>In der Zwischenzeit erreichen Sie uns per E-Mail: 
+            <a href="mailto:kontakt@leajohannes.ch" class="fw-bold">kontakt@leajohannes.ch</a>
+        </p>
     </div>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-3 bg-light">
+        <div class="container">
+            <p class="m-0">&copy; 2025 Lea & Johannes</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
