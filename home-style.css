@@ -13,11 +13,48 @@ body {
     background-color: #d8a18f;
     color: black;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     text-align: center;
     padding: 20px;
+}
+
+/* Navigation Menu */
+.navbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1); /* Slight transparency */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: white;
 }
 
 /* Flex container */
@@ -29,12 +66,13 @@ body {
     max-width: 800px;
     width: 100%;
     padding: 20px;
+    margin-top: 60px; /* To ensure spacing below navbar */
 }
 
 /* Logo - Bigger on Desktop */
 .logo {
-    width: 60%; /* Increased for desktop */
-    max-width: 500px; /* Significantly larger on bigger screens */
+    width: 60%;
+    max-width: 500px;
     height: auto;
     margin-bottom: 20px;
 }
@@ -45,19 +83,19 @@ body {
     width: 100%;
 }
 
-/* Responsive Text (Reduced Font Size) */
+/* Responsive Text */
 .content h1 {
-    font-size: 2rem; /* Reduced by 5 units */
-    line-height: 1.4; /* Keeps spacing */
+    font-size: 2rem;
+    line-height: 1.4;
     white-space: nowrap;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 20px; /* Ensures gap */
+    margin-bottom: 20px;
 }
 
 .content p {
-    font-size: 1.1rem; /* Reduced by 5 units */
+    font-size: 1.1rem;
 }
 
 .content a {
@@ -95,6 +133,11 @@ body {
     .content p {
         font-size: 0.9rem;
     }
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -110,6 +153,15 @@ body {
 
     .content p {
         font-size: 0.85rem;
+    }
+
+    .navbar ul {
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+        padding: 5px 10px;
     }
 }
 
@@ -130,6 +182,11 @@ body {
 
     .content p {
         font-size: 0.8rem;
+    }
+
+    .navbar a {
+        font-size: 0.85rem;
+        padding: 4px 8px;
     }
 }
 
